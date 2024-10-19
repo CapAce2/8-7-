@@ -9,6 +9,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// 修改图片点击事件处理
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault(); // 阻止默认行为
+        const imgAlt = this.querySelector('img').alt;
+        let pageUrl;
+        
+        // 根据图片的 alt 属性决定打开哪个页面
+        if (imgAlt === "班级照片1") {
+            pageUrl = "gallery/class_photo.html";
+        } else if (imgAlt === "班级照片2") {
+            pageUrl = "gallery/daily_life.html";
+        } else {
+            // 如果没有匹配的 alt，可以设置一个默认页面
+            pageUrl = "gallery/default.html";
+        }
+        
+        window.open(pageUrl, '_blank');
+    });
+});
+
 // 添加这个函数来记录调试信息
 function log(message) {
     console.log(message);

@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #4A90E2; 
-    --secondary-color: #E6F3FF; 
-    --background-color: #FFFFFF;
-    --text-color: #333333;
-    --home-color: #F0F8FF;
-    --class-color: #E6F3FF;
-    --teachers-color: #F0FFF0;
-    --students-color: #FFF0F5;
-    --gallery-color: #FFFAF0;
+    --primary-color: #4A90E2; /* 淡蓝色 */
+    --secondary-color: #E6F3FF; /* 更浅的蓝色 */
+    --background-color: #FFFFFF; /* 白色 */
+    --text-color: #333333; /* 深灰色文字 */
+    --home-color: #F0F8FF; /* 爱丽丝蓝 */
+    --class-color: #E6F3FF; /* 浅蓝色 */
+    --teachers-color: #F0FFF0; /* 蜜瓜色 */
+    --students-color: #FFF0F5; /* 薰衣草色 */
+    --gallery-color: #FFFAF0; /* 花白色 */
 }
 
 * {
@@ -18,7 +18,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.4;
+    line-height: 1.4; /* 减小行高 */
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -26,7 +26,7 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--background-color);
-    padding: 0; 
+    padding: 0; /* 移除上下内边距 */
     position: fixed;
     top: 0;
     left: 0;
@@ -39,30 +39,30 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; 
-    padding: 0.5rem 0; 
+    flex-wrap: wrap; /* 允许按钮换行 */
+    padding: 0.5rem 0; /* 为导航栏添加一些上下内边距 */
 }
 
 nav ul li {
-    margin: 0.25rem; 
+    margin: 0.25rem; /* 为每个按钮添些外边距 */
 }
 
 nav ul li a {
     color: var(--background-color);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem; /* 减小内边距 */
     transition: background-color 0.3s, color 0.3s;
-    font-size: 1rem;
+    font-size: 1rem; /* 减小字体大小 */
     font-weight: bold;
-    display: inline-block;
-    white-space: nowrap; 
+    display: inline-block; /* 使链接成为块级元素 */
+    white-space: nowrap; /* 防止文本换行 */
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    outline: none;
+    outline: none; /* 移除焦点轮廓 */
 }
 
 nav ul li a:active {
@@ -71,13 +71,13 @@ nav ul li a:active {
 }
 
 main {
-    padding-top: 60px; 
+    padding-top: 60px; /* 增加顶部内边距 */
     width: 100%;
 }
 
 section {
-    min-height: 70vh;
-    padding: 50px 1rem 1rem; 
+    min-height: 70vh; /* 从 80vh 减小到 70vh */
+    padding: 50px 1rem 1rem; /* 减小顶部内边距 */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -85,15 +85,15 @@ section {
 }
 
 h1, h2 {
-    margin-bottom: 0.8rem; 
+    margin-bottom: 0.8rem; /* 减小标题下方间距 */
 }
 
-
+/* 修改 .banner-image 样式 */
 .banner-image {
     width: 100%;
-    height: 40vh;
+    height: 400px; /* 固定高度 */
     overflow: hidden;
-    margin-bottom: 0.8rem; 
+    margin-bottom: 0.8rem; /* 稍微减小下方间距 */
     position: relative;
 }
 
@@ -101,10 +101,11 @@ h1, h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
+    object-position: center; /* 确保图片居中 */
+    position: absolute; /* 使用绝对定位 */
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 精确居中 */
 }
 
 #home {
@@ -113,10 +114,10 @@ h1, h2 {
 }
 
 #home h1 {
-    margin-top: 0.8rem;
+    margin-top: 0.8rem; /* 稍微减小标题上方间距 */
 }
 
-
+/* 在文件末尾添加以下样式 */
 .class-intro {
     max-width: 800px;
     margin: 0 auto;
@@ -124,80 +125,86 @@ h1, h2 {
     font-size: 1.1em;
     line-height: 1.6;
     color: var(--text-color);
-    padding: 10px;
+    padding: 10px; /* 减小内边距 */
     background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.6rem; 
+    margin-bottom: 0.6rem; /* 减小底部间距 */
 }
 
 .teacher-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 0.8rem; 
 }
 
 .teacher {
-    width: 28%;
-    margin-bottom: 12px; 
+    width: calc(25% - 15px); /* 调整宽度以适应四个老师 */
+    margin-bottom: 20px;
     text-align: center;
     background-color: var(--background-color);
-    padding: 12px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .teacher img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+    width: 400px; /* 增加宽度 */
+    height: 533px; /* 增加高度，保持3:4的比例 */
+    object-fit: contain; /* 确保整个图片都显示，可能会留白 */
+    object-position: center top; /* 将图片位置调整到顶部中心 */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
 }
 
 .teacher p {
-    margin-top: 4px;
+    margin-top: 4px; /* 减小文字顶部间距 */
     font-size: 1em;
     color: #333;
 }
 
-@media (max-width: 768px) {
-    .teacher-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 1024px) {
     .teacher {
-        width: 85%;
-        max-width: 250px;
-        margin-bottom: 1rem;
+        width: calc(50% - 10px); /* 在中等屏幕上每行显示两个 */
     }
 }
 
+@media (max-width: 768px) {
+    .teacher {
+        width: 100%; /* 在小屏幕上每行显示一个 */
+        max-width: 300px;
+    }
+}
 
+/* 添加新的样式来调整整体布局 */
 #class, #teachers, #students, #gallery {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 70px; /* 增加滚动边距 */
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.6rem; 
+    font-size: 1.5em; /* 减小副标题字体大小 */
+    margin-bottom: 0.6rem; /* 一步减小标题下方间距 */
 }
 
-
+/* 添加以下媒体查询和样式 */
 
 @media screen and (max-width: 768px) {
-    
+    /* 调整主要内容样式 */
+    /* 移除这一行
+    .banner-image {
+        height: 30vh;
+    }
+    */
 
     .class-intro {
         font-size: 0.9em;
         padding: 12px;
     }
 
-   
+    /* 调整教师卡片样式 */
     .teacher-container {
         flex-direction: column;
         align-items: center;
@@ -213,7 +220,7 @@ h2 {
         max-width: 100%;
     }
 
-   
+    /* 调整标题样式 */
     h1 {
         font-size: 1.5em;
     }
@@ -223,9 +230,14 @@ h2 {
     }
 }
 
-
+/* 针对更小的屏幕（如iPhone 5/SE）的额外调整 */
 @media screen and (max-width: 320px) {
-   
+    /* 移除这一行
+    .banner-image {
+        height: 25vh;
+    }
+    */
+
     .class-intro {
         font-size: 0.8em;
     }
@@ -244,65 +256,65 @@ h2 {
     }
 }
 
-
+/* 修改媒体查询部分 */
 @media screen and (max-width: 768px) {
     section {
-        min-height: auto; 
-        padding: 30px 1rem 1rem; 
+        min-height: auto; /* 移除最小高度制 */
+        padding: 30px 1rem 1rem; /* 减小内边距 */
     }
 
     .banner-image {
-        height: 30vh;
+        height: 300px; /* 动设备上稍微减小高度 */
     }
 
     h1 {
-        font-size: 1.4em; 
+        font-size: 1.4em; /* 主标题字体 */
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 1.2em; /* 减小副标题字体 */
     }
 
     .class-intro {
-        font-size: 0.9em;
-        padding: 10px;
+        font-size: 0.9em; /* 减小介绍文字大小 */
+        padding: 10px; /* 减小内边距 */
     }
 
     .teacher-container {
-        margin-top: 0.5rem;
+        margin-top: 0.5rem; /* 减小顶部间距 */
     }
 
     .teacher {
-        width: 90%;
+        width: 90%; /* 增加宽度以适应小屏幕 */
         max-width: 250px;
-        margin-bottom: 0.8rem;
-        padding: 10px;
+        margin-bottom: 0.8rem; /* 减小底部间距 */
+        padding: 10px; /* 减小内边距 */
     }
 
     .teacher img {
-        max-width: 180px;
+        max-width: 180px; /* 减小图片最大宽度 */
     }
 
     .teacher p {
-        font-size: 0.9em; 
-        margin-top: 3px; 
+        font-size: 0.9em; /* 减小文字大小 */
+        margin-top: 3px; /* 减小文字顶部间距 */
     }
 
-   
+    /* 调整主要内容的左右填充 */
     main {
         padding-left: 15px;
         padding-right: 15px;
     }
 
     .banner-image {
-        width: calc(100% + 30px);
-        margin-left: -15px; 
-        margin-right: -15px;
+        width: calc(100% + 30px); /* 使图片宽度超出内容区 */
+        margin-left: -15px; /* 向左延伸 */
+        margin-right: -15px; /* 向右延伸 */
     }
 
     .class-intro {
-        width: 100%;
-        padding: 10px 15px;
+        width: 100%; /* 确保度为100% */
+        padding: 10px 15px; /* 增加左内边距 */
         margin-left: 0;
         margin-right: 0;
     }
@@ -313,22 +325,22 @@ h2 {
     }
 
     .teacher {
-        width: 100%;
+        width: 100%; /* 使教师卡片填满容器 */
         max-width: none;
         margin-left: 0;
         margin-right: 0;
-        padding: 10px 15px;
+        padding: 10px 15px; /* 增加左右内边距 */
     }
 
     .teacher img {
-        max-width: 100%; 
+        max-width: 100%; /* 图片宽度填满容器 */
     }
 }
 
-
+/* 针对更小的屏幕（如iPhone 5/SE）的额外调整 */
 @media screen and (max-width: 320px) {
     .banner-image {
-        height: 25vh;
+        height: 200px; /* 在更小的设备进一步减小高度 */
     }
 
     h1 {
@@ -374,33 +386,33 @@ h2 {
     }
 }
 
-
+/* 保持原有的式不变，只修改媒体查询部分 */
 
 @media screen and (max-width: 768px) {
-  
+    /* 其他样式保持不变 */
 
     h1 {
-        font-size: 1.8em; 
+        font-size: 1.8em; /* 增大主标字体 */
     }
 
     h2 {
-        font-size: 1.5em; 
+        font-size: 1.5em; /* 增大副标题字体 */
     }
 
     .class-intro {
-        font-size: 1.1em; 
+        font-size: 1.1em; /* 增大介绍文字大小 */
     }
 
     .teacher p {
-        font-size: 1.1em; 
+        font-size: 1.1em; /* 增大教师介绍文字大小 */
     }
 
     nav ul li a {
-        font-size: 1.2rem; 
+        font-size: 1.2rem; /* 增大导航栏字体大小 */
     }
 }
 
-
+/* 针对更小的幕（如iPhone 5/SE）的额外调整 */
 @media screen and (max-width: 320px) {
     h1 {
         font-size: 1.6em;
@@ -423,62 +435,62 @@ h2 {
     }
 }
 
-
+/* 增大桌面版的字体和元素大小 */
 @media screen and (min-width: 769px) {
     body {
-        font-size: 18px; 
+        font-size: 18px; /* 增大基础字体大小 */
     }
 
     h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* 增大主标题字体 */
     }
 
     h2 {
-        font-size: 2em; 
+        font-size: 2em; /* 增大副标题字体 */
     }
 
     .banner-image {
-        height: 50vh; 
+        height: 50vh; /* 增加banner图片高度 */
     }
 
     .class-intro {
-        font-size: 1.2em; 
-        padding: 20px; 
-        max-width: 1000px; 
+        font-size: 1.2em; /* 增大介绍文字大小 */
+        padding: 20px; /* 增加内边距 */
+        max-width: 1000px; /* 增加大宽度 */
     }
 
     .teacher-container {
-        max-width: 1400px; 
+        max-width: 1400px; /* 加容最大宽度 */
     }
 
     .teacher {
-        width: 30%; 
-        padding: 20px; 
+        width: 30%; /* 稍微增加宽 */
+        padding: 20px; /* 增加内边距 */
     }
 
     .teacher img {
-        max-width: 250px; 
+        max-width: 250px; /* 增加图片最大宽度 */
     }
 
     .teacher p {
-        font-size: 1.1em; 
-        margin-top: 10px; 
+        font-size: 1.1em; /* 增大教师介绍文字大小 */
+        margin-top: 10px; /* 增加文字顶部间距 */
     }
 
     nav ul li a {
-        font-size: 1.2rem;
-        padding: 0.7rem 1.5rem; 
+        font-size: 1.2rem; /* 增大导航栏字体大小 */
+        padding: 0.7rem 1.5rem; /* 增加内边距 */
     }
 
     section {
-        min-height: 80vh; 
-        padding: 80px 2rem 2rem;
+        min-height: 80vh; /* 增加section最高高度 */
+        padding: 80px 2rem 2rem; /* 增加内边距 */
     }
 }
 
+/* 保留原有的手机版媒体查询样式 */
 
-
-
+/* 在文件末尾添加以下样式 */
 .student-container {
     display: flex;
     justify-content: space-between;
@@ -488,7 +500,7 @@ h2 {
 }
 
 .student {
-    width: 30%; 
+    width: 30%; /* 与教师卡片宽度一致 */
     margin-bottom: 20px;
     text-align: center;
     background-color: var(--background-color);
@@ -499,10 +511,10 @@ h2 {
 
 .student img {
     width: 100%;
-    max-width: 250px; 
+    max-width: 250px; /* 与教师图片最大宽度一致 */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(74, 144, 226, 0.2);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.2); /* 淡蓝色阴影 */
 }
 
 .student p {
@@ -543,26 +555,22 @@ h2 {
     }
 }
 
+/* 修改 .teacher img 和 .student img 样式 */
 .teacher img,
 .student img {
-    width: 300px; 
-    height: 500px;
-    object-fit: cover;
+    width: 300px; /* 固定宽度 */
+    height: 400px; /* 固定高度 */
+    object-fit: contain; /* 确保整个图片都显示，可能会留白 */
+    object-position: center top; /* 将图片位置调整到顶部中心 */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
 }
 
 .teacher,
 .student {
-    width: 340px; 
+    width: 340px; /* 容器宽度稍大于图片 */
     margin-bottom: 20px;
     padding: 15px;
-}
-
-.teacher p,
-.student p {
-    margin-top: 10px;
-    font-size: 1em;
 }
 
 .teacher-container,
@@ -571,47 +579,297 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* 移除悬停效果 */
 
+/* 响应式调整 */
 @media screen and (max-width: 768px) {
     .teacher img,
     .student img {
-        width: 240px; 
-        height: 450px; 
+        width: 250px;
+        height: 333px;
     }
 
     .teacher,
     .student {
-        width: 280px;
+        width: 290px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .teacher img,
     .student img {
-        width: 210px; 
-        height: 400px;
+        width: 200px;
+        height: 267px;
     }
 
     .teacher,
     .student {
-        width: 250px;
+        width: 240px;
     }
 }
 
+/* 移除之前的响应式调整 */
+@media screen and (max-width: 1200px) {
+    .teacher,
+    .student {
+        width: 340px; /* 保持宽度不变 */
+    }
+}
 
-@media screen and (max-width: 320px) {
-    .teacher img,
-    .student img {
-        width: 180px; 
-        height: 350px; 
+@media screen and (max-width: 900px) {
+    .teacher,
+    .student {
+        width: 340px; /* 保持宽度不变 */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .teacher,
+    .student {
+        width: 340px; /* 保持宽度不变 */
+        max-width: none; /* 移除最大宽度限制 */
+    }
+}
+
+/* 在文件末尾添加以下样式 */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-image {
+    width: 250px; /* 减小宽度 */
+    height: 350px; /* 减小高度 */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-image {
+        width: 180px;
+        height: 270px;
     }
 
     .teacher,
-    .student {
+    .student,
+    .gallery-item {
         width: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-image {
+        width: 160px;
+        height: 240px;
+    }
+
+    .teacher,
+    .student,
+    .gallery-item {
+        width: 200px;
+    }
+}
+
+/* 保留之前的样式,在文件末尾添加以下样式 */
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .image-overlay {
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-image {
+        width: 240px;
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-image {
+        width: 200px;
+        height: 266px;
+    }
+}
+
+/* 在文件末尾添加以下样式 */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.gallery-title {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.gallery-item:hover .gallery-title {
+    color: var(--primary-color);
+}
+
+/* 修改教师和学生容器的样式 */
+.teacher-container,
+.student-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%; /* 改为100%以充分利用页面宽度 */
+    margin: 0 auto;
+    padding: 0 20px; /* 添加一些内边距 */
+}
+
+.teacher,
+.student {
+    width: calc(25% - 20px); /* 行四个项目 */
+    min-width: 200px; /* 设置最小宽度 */
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.teacher img,
+.student img {
+    width: 100%; /* 图片宽度填满容器 */
+    height: 300px; /* 固定高度 */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 1200px) {
+    .teacher,
+    .student {
+        width: calc(33.33% - 20px); /* 每行三个项目 */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .teacher,
+    .student {
+        width: calc(50% - 20px); /* 每行两个项目 */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .teacher,
+    .student {
+        width: 100%; /* 每行一个项目 */
+        max-width: 300px; /* 限制最大宽度 */
+    }
+}
+
+/* 修改相册容器的样式 */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gallery-item {
+    width: calc(50% - 20px); /* 每行两个项目 */
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* 调整教师容器的响应式布局 */
+@media screen and (max-width: 1800px) {
+    .teacher {
+        width: calc(50% - 20px); /* 每行两个项目 */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .teacher {
+        width: 100%; /* 每行一个项目 */
+        max-width: 440px; /* 限制最大宽度 */
+    }
+    
+    .teacher img {
+        width: 360px; /* 在较小屏幕上稍微减小图片大小 */
+        height: 480px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .teacher img {
+        width: 300px; /* 在更小的屏幕上进一步减小图片大小 */
+        height: 400px;
     }
 }
