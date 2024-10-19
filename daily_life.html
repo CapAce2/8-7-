@@ -13,9 +13,11 @@
             margin: 0 auto;
             padding: 20px;
             text-align: center;
+            font-size: 18px; /* 增加基础字体大小 */
         }
         h1 {
             color: #4A90E2;
+            font-size: 2.5em; /* 相对于 body 的字体大小 */
         }
         .media-container {
             display: flex;
@@ -37,9 +39,12 @@
         }
         p {
             margin-top: 10px;
-            font-size: 0.9em;
+            font-size: 1.1em; /* 相对于 body 的字体大小 */
         }
         @media (max-width: 768px) {
+            body {
+                font-size: 16px; /* 在较小屏幕上稍微减小字体大小 */
+            }
             .media-item {
                 width: 250px;
             }
@@ -49,6 +54,9 @@
             }
         }
         @media (max-width: 480px) {
+            body {
+                font-size: 14px; /* 在最小屏幕上进一步减小字体大小 */
+            }
             .media-item {
                 width: 200px;
             }
@@ -63,48 +71,40 @@
     <h1>班级日常生活</h1>
     <div class="media-container">
         <div class="media-item">
-            <img src="../午休.jpeg" alt="午休时光">
-            <p>午休时光：休息是为了更好的学习</p>
+            <img src="./午休.jpeg" alt="午休时光">
         </div>
         <div class="media-item">
             <video controls>
-                <source src="../yd.mp4" type="video/mp4">
+                <source src="./yd.mp4" type="video/mp4">
                 您的浏览器不支持视频标签。
             </video>
-            <p>运动时刻：健康身体，快乐学习</p>
         </div>
         <div class="media-item">
             <video controls>
-                <source src="../yd2.mp4" type="video/mp4">
+                <source src="./yd2.mp4" type="video/mp4">
                 您的浏览器不支持视频标签。
             </video>
-            <p>课堂互动：活跃的课堂氛围</p>
         </div>
         <div class="media-item">
             <video controls>
-                <source src="../yd3.mp4" type="video/mp4">
+                <source src="./yd3.mp4" type="video/mp4">
                 您的浏览器不支持视频标签。
             </video>
-            <p>小组讨论：团队合作的力量</p>
         </div>
         <div class="media-item">
             <video controls>
-                <source src="../qbd.mp4" type="video/mp4">
+                <source src="./qbd.mp4" type="video/mp4">
                 您的浏览器不支持视频标签。
             </video>
-            <p>趣味活动：学习之余的欢乐时光</p>
         </div>
         <div class="media-item">
-            <img src="../qbd2.jpeg" alt="趣味活动2">
-            <p>另一个有趣的活动瞬间</p>
+            <img src="./qbd2.jpeg" alt="趣味活动2">
         </div>
         <div class="media-item">
-            <img src="../xq.jpeg" alt="校庆活动">
-            <p>校庆活动：共同庆祝学校的生日</p>
+            <img src="./xq.jpeg" alt="校庆活动">
         </div>
         <div class="media-item">
-            <img src="../wtm.jpeg" alt="我们的班级">
-            <p>我们的班级：团结友爱的大家庭</p>
+            <img src="./wtm.jpeg" alt="我们的班级">
         </div>
     </div>
     <p>这些是我们班级日常生活的缩影。每一天都充满欢声笑语,我们在学习之余也不忘放松身心,享受校园生活的美好时光。</p>
