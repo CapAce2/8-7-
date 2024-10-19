@@ -18,9 +18,9 @@ document.querySelectorAll('.gallery-item').forEach(item => {
         
         // 根据图片的 alt 属性决定打开哪个页面
         if (imgAlt === "班级照片1") {
-            pageUrl = "gallery/class_photo.html";
+            pageUrl = "./class_photo.html";
         } else if (imgAlt === "班级照片2") {
-            pageUrl = "gallery/daily_life.html";
+            pageUrl = "./daily_life.html";
         } else {
             // 如果没有匹配的 alt，可以设置一个默认页面
             pageUrl = "gallery/default.html";
